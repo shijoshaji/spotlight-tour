@@ -1,0 +1,50 @@
+{
+    "name": "@jojovms/react-spotlight-tour",
+    "version": "0.0.1",
+    "description": "Guidō: A React wrapper (hook & component) for the formatted spotlight tour library.",
+    "keywords": [
+        "spotlight",
+        "tour",
+        "guide",
+        "walkthrough",
+        "onboarding",
+        "guidō",
+        "jojovms",
+        "react"
+    ],
+    "author": "Shijo Shaji (https://shijoshaji.in)",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/shijoshaji/spotlight-tour.git",
+        "directory": "react"
+    },
+    "bugs": {
+        "url": "https://github.com/shijoshaji/spotlight-tour/issues"
+    },
+    "homepage": "https://shijoshaji.github.io/spotlight-tour/",
+    "main": "dist/index.js",
+    "module": "dist/index.mjs",
+    "types": "dist/index.d.ts",
+    "peerDependencies": {
+        "react": "^18.0.0",
+        "react-dom": "^18.0.0"
+    },
+    "dependencies": {
+        "@jojovms/spotlight-tour-core": "*"
+    },
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "vite build"
+    },
+    "devDependencies": {
+        "vite": "^5.0.10",
+        "vite-plugin-dts": "^3.6.4",
+        "@types/react": "^18.2.43",
+        "@types/react-dom": "^18.2.17"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
+}

@@ -1,0 +1,54 @@
+{
+    "name": "@jojovms/angular-spotlight-tour",
+    "version": "0.0.1",
+    "description": "Guidō: An Angular wrapper (service & directive) for the formatted spotlight tour library.",
+    "keywords": [
+        "spotlight",
+        "tour",
+        "guide",
+        "walkthrough",
+        "onboarding",
+        "guidō",
+        "jojovms",
+        "angular"
+    ],
+    "author": "Shijo Shaji (https://shijoshaji.in)",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/shijoshaji/spotlight-tour.git",
+        "directory": "angular"
+    },
+    "bugs": {
+        "url": "https://github.com/shijoshaji/spotlight-tour/issues"
+    },
+    "homepage": "https://shijoshaji.github.io/spotlight-tour/",
+    "main": "dist/index.js",
+    "module": "dist/index.mjs",
+    "types": "dist/index.d.ts",
+    "peerDependencies": {
+        "@angular/core": "^17.0.0",
+        "@angular/common": "^17.0.0",
+        "rxjs": "^7.8.0"
+    },
+    "dependencies": {
+        "@jojovms/spotlight-tour-core": "*"
+    },
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "vite build"
+    },
+    "devDependencies": {
+        "vite": "^5.0.10",
+        "vite-plugin-dts": "^3.6.4",
+        "@angular/core": "^17.0.0",
+        "@angular/common": "^17.0.0",
+        "rxjs": "^7.8.0",
+        "zone.js": "^0.14.0",
+        "typescript": "^5.3.3"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
+}
