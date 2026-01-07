@@ -52,3 +52,7 @@ tour.start();
   placement?: 'top' | 'bottom' | 'left' | 'right'; // Preferred position
 }
 ```
+
+## License
+
+MIT © [Shijo Shaji](https://shijoshaji.in)

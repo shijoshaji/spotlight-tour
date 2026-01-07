@@ -1,6 +1,6 @@
 {
     "name": "@jojovms/angular-spotlight-tour",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Guidō: An Angular wrapper (service & directive) for the formatted spotlight tour library.",
     "keywords": [
         "spotlight",
@@ -22,9 +22,6 @@
         "url": "https://github.com/shijoshaji/spotlight-tour/issues"
     },
     "homepage": "https://shijoshaji.github.io/spotlight-tour/",
-    "main": "dist/index.js",
-    "module": "dist/index.mjs",
-    "types": "dist/index.d.ts",
     "peerDependencies": {
         "@angular/core": "^17.0.0",
         "@angular/common": "^17.0.0",
@@ -33,17 +30,19 @@
     "dependencies": {
         "@jojovms/spotlight-tour-core": "*"
     },
-    "files": [
-        "dist"
-    ],
+    "license": "MIT",
     "scripts": {
-        "build": "vite build"
+        "build": "ng-packagr -p ng-package.json",
+        "pub": "npm version patch && npm run build && cd dist && npm publish --access public"
     },
     "devDependencies": {
         "vite": "^5.0.10",
         "vite-plugin-dts": "^3.6.4",
         "@angular/core": "^17.0.0",
         "@angular/common": "^17.0.0",
+        "@angular/compiler": "^17.0.0",
+        "@angular/compiler-cli": "^17.0.0",
+        "ng-packagr": "^17.0.0",
         "rxjs": "^7.8.0",
         "zone.js": "^0.14.0",
         "typescript": "^5.3.3"

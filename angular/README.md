@@ -19,12 +19,20 @@ export class AppComponent {
   constructor(private tourService: SpotlightTourService) {}
 
   startTour() {
-    this.tourService.start({
+    // 1. Initialize with options first
+    this.tourService.init({
       steps: [
         { target: '#btn1', content: 'This is button 1' },
-        { target: '#btn2', content: 'This is button 2' }
+         { target: '#btn2', content: 'This is button 2' }
       ]
     });
+
+    // 2. Start the tour
+    this.tourService.start();
   }
 }
 ```
+
+## License
+
+MIT © [Shijo Shaji](https://shijoshaji.in)

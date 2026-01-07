@@ -1,6 +1,7 @@
 {
     "name": "@jojovms/spotlight-tour-core",
-    "version": "0.0.1",
+    "license": "MIT",
+    "version": "0.0.4",
     "description": "Guidō: A flexible and lightweight library for creating spotlight tours (guided walkthroughs) for your web applications.",
     "keywords": [
         "spotlight",
@@ -28,7 +29,8 @@
         "dist"
     ],
     "scripts": {
-        "build": "vite build"
+        "build": "vite build",
+        "pub": "npm version patch && npm run build && npm publish --access public"
     },
     "devDependencies": {
         "typescript": "^5.3.3",

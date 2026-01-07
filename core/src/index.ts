@@ -307,7 +307,7 @@ export class SpotlightTour {
       const tooltipW = tooltipRect.width;
 
       // Define possible positions with their calculated coordinates and available space
-      const positions = {
+      const positions: Record<string, { top: number; left: number; space: number; score: number }> = {
         top: {
           top: rect.top - tooltipH - gap,
           left: rect.left + (rect.width / 2) - (tooltipW / 2),
@@ -335,7 +335,7 @@ export class SpotlightTour {
       };
 
       // 1. Determine preferred position (Explicit > Calculated)
-      let currentPos: 'top' | 'bottom' | 'left' | 'right' = step.position || 'bottom';
+      let currentPos: 'top' | 'bottom' | 'left' | 'right' = (step.position || 'bottom') as any;
 
       // 2. Check if preferred position fits. If not, pick best fitting one.
       // "Fits" means the calculated coordinate is within viewport (roughly) and there is enough 'space'
@@ -357,7 +357,7 @@ export class SpotlightTour {
           currentPos = candidates[0];
         } else {
           // If NOTHING fits, pick the one with most space
-          currentPos = (['top', 'bottom'] as const).sort((a, b) => positions[b].space - positions[a].space)[0];
+          currentPos = ['top', 'bottom'].sort((a: any, b: any) => positions[b].space - positions[a].space)[0] as any;
         }
       }
 
